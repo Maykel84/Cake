@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+@font-face {
+	font-family: 'the_heart_chakraregular';
+	src: url('./fonts/the_heart_chakra_regular_400-webfont.woff2') format('woff2'),
+		url('./fonts/the_heart_chakra_regular_400-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	width: 100%;
+	height: 100vh;
+	background-image: url(david-holifield-9pUZ5UdOMNw-unsplash.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.logo {
+	width: 300px;
+	height: auto;
+	color: #f256cb;
+	font-size: 45px;
+
+	font-family: 'the_heart_chakraregular';
+}
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px 6%;
+}
+
+.navlist {
+	display: flex;
+}
+
+.navlist a {
+	font-family: 'the_heart_chakraregular';
+	font-size: 25px;
+	color: #f256cb;
+	text-transform: capitalize;
+
+	padding: 10px 20px;
+	transition: all 0.5s ease;
+}
+.navlist a:hover {
+	color: #56aef2;
+    transform: translateX(30%);
+}
+#menu-icon {
+	font-size: 25px;
+	color: #f256cb;
+	z-index: 100;
+	cursor: pointer;
+}
+#menu-icon:hover{
+    color: #56aef2;
+}
+
+section {
+	padding: 0 14%;
+}
+
+.home {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	align-items: center;
+}
+.home-text h5 {
+	color: #56aef2;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-top: 10%;
+}
+.home-text h1 {
+	color: #f256cb;
+	text-transform: uppercase;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: -3px;
+	margin: 16px 0;
+	font-size: 88px;
+}
+.home-text p {
+	color: bisque;
+	font-size: 16px;
+	text-transform: capitalize;
+	max-width: 560px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+}
+.home-btn {
+	display: inline-block;
+	color: black;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	border: 2px solid #56aef2;
+	border-radius: 15px;
+	padding: 10px 20px;
+	background-color: #f256cb;
+	transition: 0.5s;
+}
+
+.home-btn:hover {
+	background-color: transparent;
+	color: #56aef2;
+    border: 2px solid #f256cb;
+}
+
+.home-icon {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	padding: 0 5%;
+	transform: translateY(-50%);
+}
+
+.home-icon i {
+	display: block;
+	margin: 25px 0;
+	color: #f256cb;
+	font-size: 25px;
+	transition: 0.5s;
+}
+
+.home-icon i:hover {
+	transform: translateX(-30%);
+	color: #56aef2;
+}
+
+@media (max-width: 788px) {
+	header {
+		padding: 25px 3%;
+		transition: 0.3s;
+	}
+   
+}
+@media (max-widht: 750px) {
+	.home-text h1 {
+		font-size: 60px;
+		transition: 0.5s;
+	}
+	.home-btn {
+		padding: 8px 18px;
+		transition: 0.5s;
+	}
+   
+}
+
+@media (max-width: 730px) {
+	.navlist {
+		position: absolute;
+		top: -600px;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		background-color: aqua;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	.navlist a {
+		display: block;
+		padding: 16px;
+		margin: 8px;
+		color: #f256cb;
+		border-bottom: 2px solid #f256cb;
+	}
+	.navlist.open {
+		top: 100%;
+	}
+   
+}
